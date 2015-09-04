@@ -51,15 +51,15 @@ try:
     b.graph_off()
     @j.on(j.UP)
     def handle_up(ch,evt):
-      print("Up pressed!")
+      print("Playing BBC Radio 2")
       l.clear()
-      b.rgb(128,0,128)
+      b.rgb(255,0,255)
       l.write("BBC Radio 2")
       player(radio2)
 
     @j.on(j.DOWN)
     def handle_down(ch,evt):
-      print("Down pressed!")
+      print("Playing BBC 6 Music")
       l.clear()
       b.rgb(87,145,146)
       l.write("BBC 6 Music")
@@ -69,7 +69,7 @@ try:
     def handle_left(ch,evt):
       print("Left pressed!")
       l.clear()
-      l.write("BBC NEWS")
+      l.write("BBC News Feed")
       time.sleep(1)
       l.clear()
       b.rgb(0,0,128)
@@ -102,7 +102,7 @@ try:
         
     @j.on(j.CANCEL)
     def handle_cancel(ch,evt):
-      print("Cancel pressed!")
+      print("Stopping Music")
       l.clear()
       b.rgb(0,0,0)
       stop()
