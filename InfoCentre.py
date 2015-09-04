@@ -47,6 +47,8 @@ def player(radio):
 
 def stop():
     p.stop()
+    b.rgb(255,0,0)
+    l.write("S T O P")
 try:
     b.graph_off()
     @j.on(j.UP)
@@ -92,12 +94,13 @@ try:
       x = 0
       l.set_cursor_position(0,0)
       l.write("Linux Voice")
-      for i in range(5):
-        x+=1
-   
-        b.sweep( (x%360)/360.0)
-        b.set_graph(abs(math.sin(x/100.0)))
-        time.sleep(0.01)  
+      for i in range(256,5):
+          b.left_rgb(i,0,0)
+          time.sleep(0.01)
+          b.mid_rgb(i,0,0)
+          time.sleep(0.01)
+          b.right_rgb(i,0,0)
+          time.sleep(0.01)
 
         
     @j.on(j.CANCEL)
