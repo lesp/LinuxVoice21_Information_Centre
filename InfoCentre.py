@@ -22,7 +22,6 @@ def feedme(feed):
 def scrollText(scrollBlurb):
   if len(scrollBlurb) > 16:
     padding = " " * 16
-    oldText = scrollBlurb
     scrollBlurb = padding + scrollBlurb + " "
     for i in range(0,len(scrollBlurb)):
       l.set_cursor_position(0,0)
