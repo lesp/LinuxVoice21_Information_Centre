@@ -4,7 +4,6 @@ import dothat.touch as j
 import dothat.lcd as l
 import dothat.backlight as b
 import signal
-import os
 import feedparser
 
 global p
